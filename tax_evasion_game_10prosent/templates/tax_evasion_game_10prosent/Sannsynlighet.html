@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Du ble revidert!{% endblock %}
+
+{% block content %}
+
+{% formfields %}
+<p> Du er nettopp blitt revidert dersom det viser seg at du ikke har deklarerert hele inntekten din vil du bli straffet med en BOT ${{ player.payof }} </p> 
+
+<ul>
+    <li>Denne runden fikk du utbetalt: ${{ player.utbetalt }}</li>
+    <li>Du valgte å deklarere: ${{ player.deklarert }} </li>
+    <li>Denne runden tjente du:  ${{ player.payof }}</li>
+    {% comment %}<li>Så langt i spillet har du tjent: ${{ player.total_payof}}</li>{% endcomment %}
+    <li style="color:red;">Så langt i spillet har du tjent: ${{ player.final_total_payof}}</li>
+    <li>Alle spillerne deklarerte til sammen ${{ group.totalt_bidrag}} av utbetalingen sin, denne runden. </li>
+    <li>{{Constants.skatt}}% av alle sine (deklarerte inntekten)*2 delt på 8. Blir distribuert likt mellom alle spillerne, og du fikk utbetalt <b>${{ group.skatt_hva_man_faar_tilbake }}</b> </li>
+    <li>Random number: {{ subsession.random_number }}</li>
+</ul>
+
+
+{% next_button %}
+
+{% endblock %}

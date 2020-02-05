@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Deklarer inntekt (DEL 3){% endblock %}
+
+{% block content %}
+
+<h4>Instruksjoner denne runden:</h4>
+<h6>Sansynligheten for å bli revidert er: <b style="color:red;">10%</b> </h6>
+<h6> Du får utbetalt: <b style="color:red;">${{player.utbetalt}}</b>, hvor mye ønsker du å deklarere?</h6>
+
+{% formfields %}
+
+{% next_button %}
+
+</br>
+</br>
+</br>
+
+<p style="font-size:10px;"><u>For dem som ikke husker reglene:</u></p>
+<p style="font-size:9px;">Dere skal nå spill et spill med 8 andre spillere. Dere vil få en utbetaling i begynnelsen av hver runder. Hver spille vil få tildelt en av disse verdiene i hver runde <b>[$0.25, $0.5, $0.75, $1, $1.25, $1.5, $1.75, $2]</b>, helt tilfeldig. Men det er viktig å være klar over at den samme verdien ikke deles ut 2 ganger i løpet av en runde. Så $1.25 vil bli reservert 1 spiller den runden og ingen andre kan få dette beløpet, og samme for alle de andre verdiene.
+Etter dere får utdelt en av disse verdiene vil dere bli bedt om å deklarere hele inntekten til en auksjonarius. Han vil ta 40% av den inntekten du bestemmer deg for å <b>deklarere</b>. De gjenværende 60% av den deklarerte inntekten vil bli betalt tilbake til deg.  Men de 40% auksjonarius tar putter han inn i en felles pott som blir ganget med 2 og fordelt likt mellom alle de 8 deltagerne. Det spiller ingen rolle om individet deklarerte hele inntekten sin eller 0, han vi fortsatt mota det samme som alle andre.
+
+MEN!
+For hver runde blir det oppgitt en sannsynlighet for å bli revidert(kontrollert av auksjonarius). Og dersom det viser seg at man ikke har valgt å deklarere hele inntekten sin vil man bli straffet med en bot. Boten er på (15 * udeklarert inntekt). Eks: Dersom man blir revidert og man hadde en utbetaling lik $1.25 og man bare deklarerte $1, vil boten bli på (15*0.25) = $3.75 som vil bli trukket fra den totale summen du har tjent.</p> 
+
+{% endblock %}

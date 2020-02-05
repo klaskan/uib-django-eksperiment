@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Bekreft at du har forstått eksperimentet{% endblock %}
+
+{% block content %}
+
+<h5>Du må svare rett på følgende spøsmål for å kunne fortsette</h5>
+<p>Dersom ikke alle spøsmålene blir besvart rett blir du sendt tilbake for å lese instuksjonene på nytt.<p>
+
+{% formfields %}
+
+{% next_button %}
+
+{% endblock %}

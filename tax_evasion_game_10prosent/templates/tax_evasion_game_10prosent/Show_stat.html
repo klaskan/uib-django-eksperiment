@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Statistikk{% endblock %}
+
+{% block content %}
+
+<ul>
+    <li>Denne runden fikk du utbetalt: ${{ player.utbetalt }}</li>
+    <li>Du valgte å deklarere: ${{ player.deklarert }} </li>
+    <li>Denne runden tjente du:  ${{ player.payof }}</li>
+    {% comment %}<li>Så langt i spillet har du tjent: ${{ player.total_payof}}</li>{% endcomment %}
+    <li style="color:red;">Så langt i spillet har du tjent: <u>${{ player.final_total_payof}}</u> </li>
+    <li>Alle spillerne deklarerte til sammen ${{ group.totalt_bidrag}} av utbetalingen sin, denne runden. </li>
+    <li>{{Constants.skatt}}% av alle sine deklarerte inntekten delt på 8. Blir distribuert likt mellom alle spillerne, og du fikk utbetalt <b>{{ group.skatt_hva_man_faar_tilbake }}</b> </li>
+    <li>Random number: {{ player.random_number12 }}</li>
+</ul>
+
+{% formfields %}
+
+{% next_button %}
+
+{% endblock %}
