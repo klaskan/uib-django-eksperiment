@@ -1,4 +1,4 @@
-# uib-django-eksperiment
+# Instructions 
 
 The TEG I am going to be constructing is based on the TEG conducted in the academic article "Why do people pay taxes?" by James Alm et al. but with some simple adjustments. These adjustments will be discussed in great detail later. 
 
