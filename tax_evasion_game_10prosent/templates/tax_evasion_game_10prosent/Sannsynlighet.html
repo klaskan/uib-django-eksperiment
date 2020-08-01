@@ -1,22 +1,22 @@
 {% extends "global/Page.html" %}
 {% load otree %}
 
-{% block title %}Du ble revidert!{% endblock %}
+{% block title %}Du ble kontrollert!{% endblock %}
 
 {% block content %}
 
 {% formfields %}
-<p> Du er nettopp blitt revidert dersom det viser seg at du ikke har deklarerert hele inntekten din vil du bli straffet med en BOT ${{ player.payof }} </p> 
+<p> Du er blitt <strong style="color:red;">kontrollert!</strong> Dersom det viser seg at du ikke har oppgitt hele inntekten din vil du bli straffet med en BOT!</p>
+<p>Du fikk en bot på: {{ player.payof }}kr  (<b>NB!</b> Dersom boten ikke har et minustegn<strong style="color:red;">(-)</strong> foran seg betyr det at du oppga din fulle inntekt og du kan overse kontrollen.)</p>
 
 <ul>
-    <li>Denne runden fikk du utbetalt: ${{ player.utbetalt }}</li>
-    <li>Du valgte å deklarere: ${{ player.deklarert }} </li>
-    <li>Denne runden tjente du:  ${{ player.payof }}</li>
-    {% comment %}<li>Så langt i spillet har du tjent: ${{ player.total_payof}}</li>{% endcomment %}
-    <li style="color:red;">Så langt i spillet har du tjent: ${{ player.final_total_payof}}</li>
-    <li>Alle spillerne deklarerte til sammen ${{ group.totalt_bidrag}} av utbetalingen sin, denne runden. </li>
-    <li>{{Constants.skatt}}% av alle sine (deklarerte inntekten)*2 delt på 8. Blir distribuert likt mellom alle spillerne, og du fikk utbetalt <b>${{ group.skatt_hva_man_faar_tilbake }}</b> </li>
-    <li>Random number: {{ subsession.random_number }}</li>
+    <li>Denne runden fikk du utbetalt: {{ player.utbetalt }}kr</li>
+    <li>Du valgte å oppgi: {{ player.deklarert }}kr </li>
+    <li>Denne runden tjente du:  {{ player.payof }}kr</li>
+    <li style="color:red;">Så langt i DEL 3 har du tjent: {{ player.final_total_payof}}kr</li>
+    <li>Alle spillerne oppga til sammen {{ group.totalt_bidrag}}kr av utbetalingene sine denne runden. </li>
+    <li>Av all inntekten som ble oppgitt, blir <b>{{ group.skatt_hva_man_faar_tilbake }}kr</b> distribuert tilbake til deg!</li>
+    {% comment %}<li>Random number: {{ player.random_number12 }}</li>{% endcomment %}
 </ul>
 
 

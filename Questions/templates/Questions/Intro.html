@@ -5,6 +5,7 @@
 
 {% block content %}
 
+{% comment %}
 Dere skal nå spill et spill med 8 andre spillere. Dere vil få en utbetaling i begynnelsen av hver runder. Hver spille vil få tildelt en av disse verdiene i hver runde <b>[$0.25, $0.5, $0.75, $1, $1.25, $1.5, $1.75, $2]</b>, helt tilfeldig. Men det er viktig å være klar over at den samme verdien ikke deles ut 2 ganger i løpet av en runde. Så $1.25 vil bli reservert 1 spiller den runden og ingen andre kan få dette beløpet, og samme for alle de andre verdiene.    
 
 </br>
@@ -21,10 +22,69 @@ For hver runde blir det oppgitt en sannsynlighet for å bli revidert(kontrollert
 </br>
 
 Vi ber deg skrive opp telefonnummeret ditt under slik at vi enkelt kan betale deg gjennom vipps. Når du mottar betalingen fra oss vil nummeret ditt bli slettet fra vårt datasett for å sikre din anonymitet. 
+{% endcomment %}
 
+
+{% comment %}
+Les godt gjennom reglene! Det vil bli en quiz på neste side. Dere må få 4/4 rett for å kunne fortsette. Lykke til! 
+</br>
+</br>
+
+Dere skal nå spille et spill med 8 andre deltakere. I hver runde vil dere få utbetalt en av følgende verdier <b>{1kr, 2kr, 3kr, 4kr, 5kr, 6kr, 7kr, 8kr}</b>. Hvem av dere som får hvilken verdi er helt tilfeldig. Men den samme verdien deles ikke ut mer enn en gang per runde. Så 5kr vil bli reservert en enkelt spiller den runden og ingen andre kan få dette beløpet, og samme for alle de andre verdiene. Dette betyr at totalsummen som deles ut i hver runde er 36kr. 
+</br>
+</br>
+
+Etter at dere har mottatt utbetalingen deres blir dere bedt om å oppgi hvor mye dere fikk utbetalt. Det dere oppgir vil det bli trukket 40% av og dere får beholde de resterende 60%. Dersom dere mot formodning ikke skulle oppgi noe, eller ikke oppgi deler av inntekten vil dere kunne bli straffet. Denne straffen er av størrelsen (15 * inntekt dere ikke oppga). 
+Sannsynligheten for om man blir oppdaget dersom man ikke oppgir hele inntekten sin vil bli gitt i hver runde. 
+</br>
+</br>
+
+Den totale summen som blir samlet opp gjennom det som blir oppgir vil bli multiplisert med to, og distribuert ut likt mellom alle deltakerne. Alle vil motta det samme uavhengig av hvor mye man oppga. Så 40% av all oppgitt inntekt vil bli x2 og distribuert likt mellom alle deltakerne. 
+</br>
+</br>
+
+I slutten av eksperimentet vil du bli bedt om å oppgi telefonnummeret ditt. Dette telefonnummeret må være det samme som du har registrert på vipps, sånn at du kan motta pengene du har tjent opp. 
+</br>
+</br>
+
+{% comment %}{% formfields %}
+
+{% next_button %}
+{% endcomment %}
+
+Les godt gjennom reglene! Det vil bli en quiz på neste side. Du må få <b>4/4</b> rett for å kunne fortsette spillet. Lykke til! 
+</br>
+</br>
+
+Du skal nå spille et spill med 8 andre deltakere. I hver runde vil du få utbetalt en av følgende verdier fra settet: <b>{1kr, 2kr, 3kr, 4kr, 5kr, 6kr, 7kr, 8kr}</b>. Det er helt tilfeldig hvem som får utbetalt hvilken verdi. Men alle beløpene i settet over deles ut én gang per runde. Så for eksempel; 5kr vil bli reservert en enkelt spiller den runden, og ingen andre kan få dette beløpet. De andre spillerne får tildelt andre verdier fra settet, men ingen får like verdier. Dette betyr at totalsummen som deles ut i hver runde er 36kr. 
+</br>
+</br>
+
+Etter at du har mottatt utbetalingen vil du få en beskjed om å oppgi hvor mye du fikk utbetalt den runden. Det du <b>oppgir</b> vil det bli trukket 40% av, og du får beholde de resterende 60%. Dersom du mot formodning ikke skulle oppgi noe, eller bare oppgir deler av inntekten er det en sannsynlighet for å bli straffet. Denne straffen er av størrelsen (15 * inntekt du ikke oppga). Sannsynligheten for om man blir oppdaget dersom man ikke oppgir hele inntekten sin vil bli oppgitt i hver runde. 
+</br>
+</br>
+
+Den totale summen som blir samlet opp gjennom det som blir oppgitt av deltakerne  vil bli multiplisert med to, og distribuert likt mellom alle deltakerne. Alle vil motta det samme uavhengig av hvor mye man oppga (Så 40% av all oppgitt inntekt vil bli x2, og distribuert likt mellom alle deltakerne hver runde). 
+</br>
+</br>
+
+I slutten av eksperimentet vil du bli bedt om å oppgi telefonnummeret ditt. Dette telefonnummeret må være det samme som du har registrert på vipps sånn at du kan motta pengene du har tjent deg opp gjennom spillet. Telefonnummeret vil kun bli brukt til formålet over, og vil bli slettet fra datasettet når utbetalingen er gjennomført. 
+</br>
+</br>
+<b>NB!</b>
+Spillet er sekvensielt og man beveger seg ikke videre til neste runde før alle deltakerne i spillet er ferdig med den pågående runden. Derfor ber vi dere om å ikke bruke alt for lang tid på hver runde. Spillet vil også være bestående av 3 deler, og pengene du tjener opp i en del vil ikke være synlig i de andre delene. 
+
+</br>
+</br>
 
 {% comment %}{% formfields %}{% endcomment %}
 
 {% next_button %}
+
+
+
+
+
+
 
 {% endblock %}

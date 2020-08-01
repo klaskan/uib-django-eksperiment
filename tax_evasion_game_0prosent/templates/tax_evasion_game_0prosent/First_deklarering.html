@@ -1,0 +1,44 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Instruksjoner denne runden: (DEL 1){% endblock %}
+
+{% block content %}
+
+<!--<h5> Instruksjoner denne runden:</h5> -->
+<ul>
+    <li><h6>Sansynligheten for å bli kontrollert er: <b style="color:red;">0%</b> </h6></li>
+    <li><h6> Du får utbetalt: <b style="color:red;">{{player.utbetalt}}kr</b>, hvor mye ønsker du å oppgi?</h6></li>
+</ul>
+
+{% formfields %}
+
+{% next_button %}
+
+</br>
+</br>
+</br>
+
+<p style="font-size:10px;"><u>For dem som ikke husker reglene:</u></p>
+<p style="font-size:9px;">
+Dere skal nå spille et spill med 8 andre deltakere. I hver runde vil dere få utbetalt én av følgende verdier <b>{1kr, 2kr, 3kr, 4kr, 5kr, 6kr, 7kr, 8kr}</b>. Hvem av dere som får hvilken verdi er helt tilfeldig. Men den samme verdien deles ikke ut mer enn én gang per runde. Så 5kr vil bli reservert én enkelt spiller den runden og ingen andre kan få dette beløpet, og samme for alle de andre verdiene. Dette betyr at totalsummen som deles ut i hver runde er 36kr. 
+
+
+Etter at dere har mottatt utbetalingen deres blir dere bedt om å oppgi hvor mye dere fikk utbetalt. Det dere oppgir vil det bli trukket 40% av og dere får beholde de resterende 60%. Dersom dere mot formodning ikke skulle oppgi noe, eller ikke oppgi deler av inntekten vil dere kunne bli straffet. Denne straffen er av størrelsen (15 * inntekt dere ikke oppga). Sannsynligheten for om man blir oppdaget dersom man ikke oppgir hele inntekten sin vil bli gitt i hver runde. 
+
+
+Den totale summen som blir samlet opp gjennom det som blir oppgir vil bli multiplisert med to, og distribuert ut likt mellom alle deltakerne. Alle vil motta det samme uavhengig av hvor mye man oppga. Så 40% av all oppgitt inntekt vil bli x2 og distribuert likt mellom alle deltakerne. 
+</p> 
+
+
+
+<!--<h4>Statistikk:</h4>
+<ul>
+    <li>Den totale deklarerte inntekten var: </li>
+    <li>Så langt har du tjent: </li>
+</ul>
+
+-->
+
+
+{% endblock %}
